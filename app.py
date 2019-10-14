@@ -5,8 +5,8 @@ import flask
 
 app = flask.Flask(__name__)
 
-@app.route('/ocr_image', methods = ['POST'])
 
+@app.route('/ocr_image', methods=['POST'])
 def ocr_image():
     req_data = flask.request.get_data()
     binary_image = req_data['binary']
