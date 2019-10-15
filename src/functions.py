@@ -3,9 +3,9 @@ import pytesseract
 import re
 
 
-def save_binary_file(byte_array: bytearray):
-    with open('../data/api_image.png', 'w+b') as image:
-        image.write(byte_array)
+def save_binary_to_file(binary: bin):
+    with open('../data/api_image.jpg', 'wb') as binary_data:
+        binary_data.write(binary)
 
 
 def licence_nr_extractor(local_image: str):
