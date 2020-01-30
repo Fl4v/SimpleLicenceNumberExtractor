@@ -1,12 +1,10 @@
 from functions import licence_nr_extractor
-import requests
 import json
 import flask
 
 app = flask.Flask(__name__)
 
-
-@app.route('/ocr_image', methods=['POST'])
+@app.route('/extract_licence_number', methods=['POST'])
 def ocr_image():
     req_data = flask.request.get_data()
     binary_image = req_data['binary']
